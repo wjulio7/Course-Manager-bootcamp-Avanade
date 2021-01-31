@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import {RouterModule} from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
+import {HttpClientModule} from '@angular/common/http';
 
 import { CourseListComponent } from './courses/course-list.component';
 import {StarComponent} from './star/star.component';
@@ -10,6 +11,7 @@ import {ReplacePipe} from './pipe/replace.pipe';
 import {NavBarComponent} from './nav-bar/nav-bar.component';
 import {Error404Component} from './error-404/error-404.component';
 import {CourseInfoComponent} from './courses/course-info.component';
+
 
 @NgModule({
   declarations: [
@@ -19,11 +21,13 @@ import {CourseInfoComponent} from './courses/course-info.component';
     ReplacePipe,
     NavBarComponent,
     Error404Component,
-    CourseInfoComponent
+    CourseInfoComponent,
+
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     RouterModule.forRoot([
       {
         path: 'courses', component: CourseListComponent
